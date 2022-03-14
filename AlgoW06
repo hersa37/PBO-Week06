@@ -1,0 +1,31 @@
+attribute:
+	string kode_cabang
+	string alamat
+	string kota
+	Pegawai pimpinan
+
+constructor()
+
+constructor(string kode, string alamat, string kota, Pegawai pimpinan)
+	kode_cabang=kode
+	this.alamat=alamat
+	this.kota=kota
+	this.pimpinan=pimpinan
+	
+void setKode_cabang(string kode)
+	kode_cabang=kode
+string getKode_cabang()
+	return kode_cabang
+void setAlamat(string alamat)
+	this.alamat=alamat
+string getAlamat()
+	return alamat
+void setkota(string kota)
+	this.kota=kota
+string getKota()
+	return kota
+void setPimpinan(Pegawai pimpinan)
+	this.pimpinan=pimpinan
+string getPimpinan()
+	return pimpinan
+
