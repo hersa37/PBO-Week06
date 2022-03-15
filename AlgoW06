@@ -5,6 +5,7 @@ attribute:
 	Pegawai pimpinan
 
 constructor()
+	this("","","",new Pegawai())
 
 constructor(string kode, string alamat, string kota, Pegawai pimpinan)
 	kode_cabang=kode

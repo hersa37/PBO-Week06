@@ -5,7 +5,6 @@
 
 package pbo1.week06;
 
-import pbo1.week04.Pegawai;
 
 /**
  *
@@ -19,9 +18,16 @@ public class KantorCabang {
     private String alamat;
     private String kota;
     private Pegawai pimpinan;
-    
+           
     public KantorCabang(){
-        
+        this("","","",new Pegawai());
+    }
+    
+    public KantorCabang(String kode, String alamat, String kota, Pegawai pimpinan){
+        kode_cabang=kode;
+        this.alamat=alamat;
+        this.kota=kota;
+        this.pimpinan=pimpinan;
     }
 
     public String getKode_cabang() {
