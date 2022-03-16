@@ -3,7 +3,7 @@
  *  Do not use without permission
  */
 
-package pbo1.week06;
+package pbo1.week06.KantorCabang;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -19,6 +19,7 @@ public class Pegawai {
     private String employeeID;
     private static String uniqueID="0";
     private String name;
+    private String jabatan;
     private LocalDate birthday;
     
     public Pegawai(){
@@ -58,6 +59,18 @@ public class Pegawai {
     public void setName(String name) {
         this.name = name;
     }    
+
+    public String getJabatan() {
+        return jabatan;
+    }
+
+    public void setJabatan(String jabatan) {
+        switch(jabatan){
+            case "pimpinan":case "teknisi":case "akuntan":
+                this.jabatan=jabatan;
+        }
+        this.jabatan = "";
+    }
     
     private static String getUniqueID(){
         int id=Integer.parseInt(uniqueID);

@@ -3,7 +3,7 @@
  *  Do not use without permission
  */
 
-package pbo1.week06;
+package pbo1.week06.KantorCabang;
 
 
 /**
@@ -14,7 +14,7 @@ package pbo1.week06;
  */
 public class KantorCabang {
     
-    private String kode_cabang;
+    private String kodeCabang;
     private String alamat;
     private String kota;
     private Pegawai pimpinan;
@@ -24,18 +24,18 @@ public class KantorCabang {
     }
     
     public KantorCabang(String kode, String alamat, String kota, Pegawai pimpinan){
-        kode_cabang=kode;
+        kodeCabang=kode;
         this.alamat=alamat;
         this.kota=kota;
         this.pimpinan=pimpinan;
     }
 
-    public String getKode_cabang() {
-        return kode_cabang;
+    public String getKodeCabang() {
+        return kodeCabang;
     }
 
-    public void setKode_cabang(String kode_cabang) {
-        this.kode_cabang = kode_cabang;
+    public void setKodeCabang(String kodeCabang) {
+        this.kodeCabang = kodeCabang;
     }
 
     public String getAlamat() {
@@ -59,7 +59,17 @@ public class KantorCabang {
     }
 
     public void setPimpinan(Pegawai pimpinan) {
-        this.pimpinan = pimpinan;
+        if(pimpinan.getJabatan().equals("pimpinan")){
+            this.pimpinan = pimpinan;
+        } else this.pimpinan = new Pegawai();
+    }
+    
+    @Override
+    public String toString(){
+        return "{Kode Cabang: "+kodeCabang
+                +"; Alamat: "+alamat
+                +"; Kota: "+kota
+                +"; Pimpinan: "+pimpinan.toString();
     }
     
     

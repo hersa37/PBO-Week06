@@ -1,3 +1,5 @@
+CLASS KANTORCABANG
+
 attribute:
 	string kode_cabang
 	string alamat
@@ -11,7 +13,9 @@ constructor(string kode, string alamat, string kota, Pegawai pimpinan)
 	kode_cabang=kode
 	this.alamat=alamat
 	this.kota=kota
-	this.pimpinan=pimpinan
+	if(pimpinan.getJabatan=="pimpinan")
+		this.pimpinan=pimpinan
+	else this.pimpinan=new pegawai()
 	
 void setKode_cabang(string kode)
 	kode_cabang=kode
@@ -26,7 +30,40 @@ void setkota(string kota)
 string getKota()
 	return kota
 void setPimpinan(Pegawai pimpinan)
-	this.pimpinan=pimpinan
+	if(pimpinan.getJabatan==pimpinan)
+		this.pimpinan=pimpinan
 string getPimpinan()
 	return pimpinan
+
+Class Point
+
+attribute:
+	int x
+	int y
+
+constructor(int x, int y)
+	if(x>=0)
+		this.x=x
+	else this.x=0
+	if(y>=0)
+		this.y=y
+	else this.y=0
+constructor()
+	this(0,0)
+setX(int x)
+	if(x>=0)
+		this.x=x
+getX()
+setY(int y)
+	if(y>=0)
+		this.y=y
+toString()
+distance(int x, int y)
+	return sqrt((this.x-x)^2+(this.y+y))
+distance(Point other)
+	return sqrt((x-other.getX())^2+(y-other.getY())^2)
+distance()
+	return sqrt(x^2+y^2)
+	
+		
 
